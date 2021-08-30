@@ -24,6 +24,7 @@
         <button type="submit" class="btn btn-default">搜索问题</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li th:if="${session.user != null}"><a href="/publish">发布</a></li>
         <li th:if="${session.user == null}"><a href="https://gitee.com/oauth/authorize?client_id=8e4c8c51acdbd739d0c83d55ead4fa7d43e949053042ef8432ccc4af3778ea8b&redirect_uri=http://localhost:8080/callback&response_type=code&scope=user_info">登录</a></li>
         <li th:if="${session.user != null}"class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" th:text="${session.user.getName()}">我<span class="caret"></span></a>

@@ -10,3 +10,7 @@ body{
     float: right;
     margin-bottom: 15px;
 }
+
+img.media-object {
+    width: 60px;
+}
